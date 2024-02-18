@@ -38,16 +38,6 @@ ThreadPool::~ThreadPool()
         worker.join();
     }
 }
-// template <class F>
-// void ThreadPool::enqueue(F &&task)
-// {
-//     {
-//         std::unique_lock<std::mutex> lock(qMutex);
-//         tasks.emplace(std::forward<F>(task));
-//     }
-
-//     cond.notify_one();
-// }
 
 void ThreadPool::stoped()
 {
