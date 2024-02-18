@@ -46,7 +46,5 @@ void FindTheName::search()
         auto paths = dir.path();
         t->enqueue([paths, this]()
                    { searchInDir(paths, name, t); });
-        // std::chrono::seconds duration(1);
-        // std::this_thread::sleep_for(duration);
     }
 }
